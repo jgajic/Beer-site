@@ -987,6 +987,10 @@ header {
           &:hover {
             background-color: #f3a342;
           }
+          
+           @include responsive(mobilni450) {
+            padding: 1rem 1.4rem;
+          }
         }
       }
     }
