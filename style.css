@@ -1139,8 +1139,8 @@ footer .left .hosting a {
 }
 @media screen and (max-width: 456px) {
   footer .left .hosting a {
-    padding: 0.3rem 0.9rem;
-    font-size: 0.8rem;
+       padding: 1rem 1.4rem;
+    
   }
 }
 footer .right {
@@ -1238,7 +1238,6 @@ footer .right .contact a {
 }
 @media screen and (max-width: 456px) {
   footer .right .contact a {
-    padding: 0.3rem 0.9rem;
-    font-size: 0.8rem;
-  }
+        padding: 1rem 1.4rem;
+    }
 }/*# sourceMappingURL=style.css.map */
