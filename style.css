@@ -870,6 +870,12 @@ header .container .slika-beer img {
   background-color: #f3a342;
 }
 
+@media screen and (max-width: 456px) {
+  .features .container .choose .choose-flavour a {
+    padding: 1rem 1.4rem;
+  }
+}
+
 .discover {
   width: auto;
   display: flex;
