@@ -1051,6 +1051,7 @@ footer .left {
   background-repeat: no-repeat;
   display: flex;
   width: 100%;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   footer .left {
@@ -1173,6 +1174,7 @@ footer .right {
   background-repeat: no-repeat;
   display: flex;
   width: 100%;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   footer .right {
