@@ -875,12 +875,6 @@ header .container .slika-beer img {
   }
 }
 
-@media screen and (max-width: 456px) {
-  .features .container .choose .choose-flavour a {
-    padding: 1rem 1.4rem;
-  }
-}
-
 .discover {
   width: auto;
   display: flex;
@@ -1057,19 +1051,31 @@ footer .left {
   background-repeat: no-repeat;
   display: flex;
   width: 100%;
-  flex: 0 0 50%;
-  align-items: center;
-  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   footer .left {
     max-width: 100%;
+    display: block;
+  }
+}
+@media screen and (max-width: 642px) {
+  footer .left {
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
   }
 }
 footer .left .hosting {
   flex-direction: column;
   color: white;
   text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  footer .left .hosting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 footer .left .hosting h2 {
   font-family: bungee;
@@ -1082,11 +1088,17 @@ footer .left .hosting h2 {
     margin: 0 5rem 2rem;
   }
 }
+@media screen and (max-width: 1100px) {
+  footer .left .hosting h2 {
+    font-size: 1.7rem;
+  }
+}
 @media screen and (max-width: 768px) {
   footer .left .hosting h2 {
     margin: 0 5rem;
     font-size: 1.6rem;
     margin-bottom: 1.4rem;
+    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 642px) {
@@ -1107,6 +1119,11 @@ footer .left .hosting p {
   footer .left .hosting p {
     font-size: 1.2rem;
     margin: 0 5rem 2rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  footer .left .hosting p {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1140,16 +1157,12 @@ footer .left .hosting a {
   footer .left .hosting a {
     font-size: 1rem;
     padding: 0.2rem 0.7rem;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 456px) {
   footer .left .hosting a {
-<<<<<<< HEAD
     padding: 1rem 1.4rem;
-=======
-       padding: 1rem 1.4rem;
-    
->>>>>>> 6b8ba3008b245afc033e05bc38c66e7bce41201f
   }
 }
 footer .right {
@@ -1160,19 +1173,31 @@ footer .right {
   background-repeat: no-repeat;
   display: flex;
   width: 100%;
-  flex: 0 0 50%;
-  align-items: center;
-  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   footer .right {
     max-width: 100%;
+    display: block;
+  }
+}
+@media screen and (max-width: 642px) {
+  footer .right {
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
   }
 }
 footer .right .contact {
   flex-direction: column;
   color: white;
   text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  footer .right .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 footer .right .contact h2 {
   font-family: bungee;
@@ -1185,11 +1210,17 @@ footer .right .contact h2 {
     margin: 0 5rem 2rem;
   }
 }
+@media screen and (max-width: 1100px) {
+  footer .right .contact h2 {
+    font-size: 1.7rem;
+  }
+}
 @media screen and (max-width: 768px) {
   footer .right .contact h2 {
     margin: 0 5rem;
     font-size: 1.6rem;
     margin-bottom: 1.4rem;
+    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 642px) {
@@ -1210,6 +1241,11 @@ footer .right .contact p {
   footer .right .contact p {
     font-size: 1.2rem;
     margin: 0 5rem 2rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  footer .right .contact p {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1243,16 +1279,11 @@ footer .right .contact a {
   footer .right .contact a {
     font-size: 1rem;
     padding: 0.2rem 0.7rem;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 456px) {
   footer .right .contact a {
-<<<<<<< HEAD
     padding: 1rem 1.4rem;
   }
 }/*# sourceMappingURL=style.css.map */
-=======
-        padding: 1rem 1.4rem;
-    }
-}/*# sourceMappingURL=style.css.map */
->>>>>>> 6b8ba3008b245afc033e05bc38c66e7bce41201f
