@@ -1,0 +1,1409 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+@mixin responsive($velicina) {
+  @if $velicina ==tablet1300 {
+    @media screen and (max-width: 1300px) {
+      @content;
+    }
+  }
+
+  @if $velicina ==tablet1100 {
+    @media screen and (max-width: 1100px) {
+      @content;
+    }
+  }
+
+  @if $velicina ==tablet980 {
+    @media screen and (max-width: 980px) {
+      @content;
+    }
+  }
+
+  @if $velicina ==mobilni768 {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $velicina ==mobilni640 {
+    @media screen and (max-width: 642px) {
+      @content;
+    }
+  }
+
+  @if $velicina ==mobilni450 {
+    @media screen and (max-width: 456px) {
+      @content;
+    }
+  }
+}
+
+
+// header
+
+header {
+  background-color: #f3c242;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  @include responsive(mobilni768) {
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(mobilni768) {
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    @include responsive(mobilni768) {
+      text-align: center;
+    }
+
+    height: 80vh;
+
+    @include responsive(tablet1300) {
+      height: 60vh;
+    }
+
+    @include responsive(mobilni768) {
+      height: auto;
+    }
+
+
+    .tekst {
+      flex: 0 0 40%;
+      display: flex;
+      flex-direction: column;
+
+
+
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        font-family: "Bungee";
+        font-weight: 400;
+
+        @include responsive(mobilni768) {
+          margin-top: 4rem;
+          width: 100%;
+        }
+
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 4.4rem;
+        margin-bottom: 1rem;
+        font-family: Bungee;
+        font-weight: 400;
+
+        @include responsive(tablet1300) {
+          font-size: 3.7rem;
+        }
+
+        @include responsive(tablet1100) {
+          font-size: 3.2rem;
+        }
+
+
+        @include responsive(mobilni768) {
+          font-size: 2.4rem;
+          width: 100%;
+        }
+
+        @include responsive(mobilni450) {
+          font-size: 2rem;
+        }
+
+      }
+
+      p {
+        font-size: 0.9rem;
+
+        @include responsive(mobilni768) {
+          font-size: 1rem;
+
+        }
+      }
+
+      .dugmici {
+
+        text-transform: uppercase;
+        margin-top: 2rem;
+        font-size: 0.8rem;
+
+        @include responsive(tablet1100) {
+          font-size: 0.7rem;
+        }
+
+        @include responsive(mobilni768) {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .dugme1 {
+          color: white;
+          text-decoration: none;
+          padding: 0.1rem 2.7rem;
+          margin-right: 2rem;
+
+
+          @include responsive(mobilni768) {
+            margin-bottom: 1rem;
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+          }
+
+          @include responsive(mobilni450) {
+            padding: 0.9rem 2.7rem;
+          }
+
+          background-color: rgb(54, 51, 51);
+          font-family: 'Bungee';
+
+
+          &:hover {
+            background-color: rgb(0, 0, 0);
+            transition: 0.5s;
+          }
+        }
+
+        .dugme2 {
+
+          text-decoration: none;
+          padding: 0.1rem 1.7rem;
+          background-color: white;
+          color: black;
+          font-family: 'Bungee';
+
+          @include responsive(mobilni768) {
+            padding: 0.5rem 2.7rem;
+            font-size: 1rem;
+            margin: 0;
+            width: 100%;
+          }
+
+          @include responsive(mobilni450) {
+            padding: 0.9rem 2.7rem;
+          }
+
+
+          &:hover {
+            background-color: black;
+            color: white;
+            transition: 0.5s;
+          }
+
+        }
+      }
+    }
+
+    .slika-beer {
+      margin-left: 5rem;
+      flex: 0 0 40%;
+
+      @include responsive(mobilni768) {
+        margin-left: 0;
+        margin-top: 2rem;
+      }
+
+      img {
+        width: 100%;
+
+        @include responsive(mobilni768) {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+// leading section
+
+.leading {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+
+
+    article {
+      display: flex;
+      margin-top: 5rem;
+      justify-content: space-evenly;
+
+      @include responsive(mobilni768) {
+        flex-direction: column;
+      }
+
+
+      .slikaSenka {
+        flex: 0 0 49%;
+        margin-right: 2rem;
+
+        @include responsive(mobilni768) {
+          margin-right: 0;
+          margin-bottom: 4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+
+        img {
+          width: 100%;
+          box-shadow: 20px 20px #c9d726;
+
+        }
+      }
+
+      .leading-tekst {
+        flex: 0 0 33%;
+
+        h2 {
+          font-size: 3rem;
+          font-family: 'Bungee';
+
+          @include responsive(tablet1200) {
+            font-size: 2.5rem;
+          }
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .years {
+      text-align: center;
+      display: flex;
+
+
+      .y1974,
+      .y1985,
+      .y2005,
+      .y2021 {
+        h2 {
+          margin-bottom: 2rem;
+
+          @include responsive(mobilni768) {
+            margin-bottom: 0.7rem;
+
+          }
+
+          font-family: 'Bungee';
+        }
+
+        span {
+          justify-content: center;
+
+          i {
+            margin-bottom: 2rem;
+
+            @include responsive(mobilni768) {
+              margin-bottom: 0.8rem;
+            }
+          }
+        }
+
+        p {
+          font-size: 0.8rem;
+          padding: 0 30px;
+
+          @include responsive(mobilni768) {
+            font-size: 1rem;
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+//  discover flavors section 
+
+.flavors {
+  display: flex;
+  justify-content: center;
+
+
+  .container {
+    width: 82%;
+    margin-top: 4rem;
+
+    @include responsive(tablet1300) {
+      width: 100%;
+    }
+
+    @include responsive(mobilni768) {
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    justify-content: center;
+    align-items: center;
+
+
+    .naslov {
+      width: 350px;
+      margin: 0 auto;
+
+
+      h2 {
+        text-align: center;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+        font-family: 'bungee';
+        font-size: 2.7rem;
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
+
+    .premium-light {
+      margin-top: 7rem;
+
+      @include responsive(tablet1100) {
+        margin-top: 0;
+      }
+
+
+      @include responsive(mobilni768) {
+        margin-top: 4rem;
+      }
+
+      display: flex;
+
+      @include responsive(mobilni768) {
+        flex-direction: column;
+      }
+
+      align-items: center;
+
+      .slika1 {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 50%;
+
+        @include responsive(mobilni768) {
+          display: flex;
+          justify-content: center;
+        }
+
+        img {
+          width: 76%;
+
+          @include responsive(mobilni768) {
+            width: auto;
+          }
+
+          @include responsive(mobilni640) {
+            width: 90%;
+          }
+        }
+
+      }
+
+      .tekst-premium {
+        flex: 0 0 50%;
+        padding: 3.7rem;
+
+        @include responsive(mobilni450) {
+          padding: 0;
+        }
+
+        h2 {
+          color: #f3c242;
+          font-family: 'Bungee';
+          font-size: 2.8rem;
+
+          @include responsive(tablet1300) {
+            font-size: 2rem;
+          }
+
+          @include responsive(mobilni640) {
+            font-size: 2rem;
+          }
+
+          @include responsive(mobilni450) {
+            font-size: 2rem;
+          }
+        }
+
+        h6 {
+          font-family: 'Bungee';
+          margin-bottom: 2rem;
+        }
+
+        .bottom {
+          font-size: 1rem;
+          margin-bottom: 3rem;
+
+        }
+
+        .extract {
+          text-transform: uppercase;
+          display: flex;
+
+          h5 {
+            font-size: 1rem;
+            font-family: bungee;
+          }
+
+          .extract2 {
+            width: 50%;
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+
+          .extract3 {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .gentain {
+          text-transform: uppercase;
+          display: flex;
+
+          h5 {
+            font-size: 1rem;
+            font-family: bungee;
+          }
+
+          p {
+            text-transform: capitalize;
+            font-size: 0.8rem;
+          }
+
+          .gentain2 {
+            width: 50%;
+
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .premium-light2 {
+      flex-direction: row-reverse;
+      margin-top: 6.7rem;
+
+
+      @include responsive(tablet1100) {
+        margin-top: 0;
+      }
+
+      @include responsive(mobilni768) {
+        margin-top: 2.8rem;
+      }
+
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include responsive(mobilni768) {
+        flex-direction: column;
+      }
+
+      .slika1 {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+
+        @include responsive(mobilni768) {
+          display: flex;
+          justify-content: center;
+        }
+
+
+        img {
+          width: 70%;
+
+          @include responsive(mobilni768) {
+            width: auto;
+          }
+
+          @include responsive(mobilni640) {
+            width: 90%;
+          }
+
+        }
+      }
+
+      .tekst-premium {
+        flex: 0 0 50%;
+        padding: 3.7rem;
+
+
+
+        @include responsive(mobilni640) {
+          padding: 0;
+        }
+
+        @include responsive(mobilni450) {
+          padding: 0;
+        }
+
+        h2 {
+          color: black;
+          font-family: 'Bungee';
+          font-size: 2.8rem;
+
+          @include responsive(tablet1300) {
+            font-size: 2rem;
+          }
+
+          @include responsive(mobilni640) {
+            font-size: 2rem;
+          }
+
+          @include responsive(mobilni450) {
+            font-size: 2rem;
+          }
+        }
+
+        h6 {
+          font-family: 'Bungee';
+          margin-bottom: 2rem;
+        }
+
+        .bottom {
+          font-size: 1rem;
+          margin-bottom: 3rem;
+
+        }
+
+        .extract {
+          text-transform: uppercase;
+          display: flex;
+
+          h5 {
+            font-size: 1rem;
+            font-family: bungee;
+          }
+
+          .extract2 {
+            width: 50%;
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+
+          .extract3 {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .gentain {
+          text-transform: uppercase;
+          display: flex;
+
+          h5 {
+            font-size: 1rem;
+            font-family: bungee;
+          }
+
+          p {
+            text-transform: capitalize;
+            font-size: 0.8rem;
+          }
+
+          .gentain2 {
+            width: 50%;
+
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// features section
+
+.features {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .container {
+    width: 60%;
+
+
+    @include responsive(tablet1300) {
+      width: 100%;
+    }
+
+    @include responsive(mobilni768) {
+      width: 100%;
+    }
+
+    margin-top: 4rem;
+
+    @include responsive(tablet1100) {
+      margin-top: 0;
+    }
+
+
+    @include responsive(mobilni768) {
+      display: block;
+      margin: 4rem 0 0 0;
+    }
+
+
+
+    .naslov {
+      width: 350px;
+      margin: 0 auto;
+
+
+      h2 {
+        text-align: center;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+        font-family: 'bungee';
+        font-size: 2.7rem;
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
+
+    .sastav {
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+
+      @include responsive(mobilni768) {
+        flex-direction: column;
+        margin-top: 4rem;
+        width: 100%;
+      }
+
+
+
+      .slika {
+        flex: 0 0 50%;
+        width: 70%;
+
+        @include responsive(mobilni768) {
+          margin-bottom: 2rem;
+        }
+
+
+        img {
+          width: 80%;
+
+          @include responsive(mobilni768) {
+            width: 100%;
+          }
+        }
+      }
+
+      .sastav-piva {
+        flex: 0 0 50%;
+
+        @include responsive(mobilni768) {
+          margin-top: 4rem;
+        }
+
+        .pivo1 {
+          display: flex;
+          margin-bottom: 1.6rem;
+
+          @include responsive(tablet1100) {
+            align-items: center;
+          }
+
+          @include responsive(mobilni768) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+          }
+
+          .slika1 {
+            width: 11%;
+            // height: 29%;
+            margin-right: 1rem;
+
+            @include responsive(mobilni768) {
+              width: 17%;
+              height: 17%;
+
+            }
+          }
+
+          p {
+            font-size: 0.8rem;
+
+            @include responsive(tablet1300) {
+              font-size: 1rem;
+            }
+
+            @include responsive(mobilni768) {
+              margin: 0 2rem;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .pivo2 {
+          display: flex;
+          margin-bottom: 1.6rem;
+
+          @include responsive(mobilni768) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+
+          }
+
+          .slika2 {
+            width: 15%;
+
+
+            @include responsive(mobilni768) {
+              width: 19%;
+
+
+            }
+
+          }
+
+          p {
+            font-size: 0.8rem;
+
+            @include responsive(tablet1300) {
+              font-size: 1rem;
+            }
+
+            @include responsive(mobilni768) {
+              margin: 0 2rem;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .pivo3 {
+          display: flex;
+          margin-bottom: 1.3rem;
+
+          @include responsive(mobilni768) {
+            flex-direction: column;
+            align-items: center;
+          }
+
+
+          .slika3 {
+            width: 15%;
+
+            @include responsive(mobilni768) {
+              width: 19%;
+            }
+          }
+
+          p {
+            font-size: 0.8rem;
+
+            @include responsive(tablet1300) {
+              font-size: 1rem;
+            }
+
+            @include responsive(mobilni768) {
+              margin: 0 2rem;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .sastav2 {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-around;
+
+
+      @include responsive(mobilni768) {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+      }
+
+      .srednji {
+        display: flex;
+
+        @include responsive(mobilni768) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 3rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+          flex: 0 0 55%;
+
+          @include responsive(mobilni768) {
+            font-size: 1rem;
+          }
+        }
+
+        img {
+          width: 2rem;
+          height: 2rem;
+
+          @include responsive(mobilni768) {
+            width: 6rem;
+            height: auto;
+            margin-right: 0.8rem;
+          }
+
+
+        }
+      }
+    }
+
+    .choose {
+      margin-top: 6rem;
+      display: flex;
+      align-items: center;
+
+      @include responsive(mobilni768) {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .choose1 {
+        flex: 0 0 50%;
+
+        @include responsive(mobilni768) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+        }
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .choose-flavour {
+        flex: 0 0 50%;
+
+        @include responsive(mobilni768) {
+          text-align: center;
+        }
+
+
+
+        h2 {
+          font-family: bungee;
+          font-size: 3rem;
+          margin-bottom: 1.2rem;
+
+          @include responsive(mobilni640) {
+            font-size: 2rem;
+          }
+        }
+
+        p {
+          font-size: 0.8rem;
+
+        }
+
+        .donji {
+          margin-bottom: 3rem;
+        }
+
+
+
+        a {
+          margin-top: 1rem;
+          background-color: #f3c242;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 0.3rem 2rem;
+          color: black;
+          font-size: 0.7rem;
+          font-family: bungee;
+
+          @include responsive(mobilni768) {
+            font-size: 1rem;
+          }
+
+          &:hover {
+            background-color: #f3a342;
+          }
+<<<<<<< HEAD
+
+          @include responsive(mobilni450) {
+            padding: 1rem 1.4rem;
+=======
+          
+           @include responsive(mobilni450) {
+             padding: 1rem 1.4rem;
+>>>>>>> 6b8ba3008b245afc033e05bc38c66e7bce41201f
+          }
+        }
+      }
+    }
+  }
+}
+
+// discover the brewing
+
+.discover {
+  width: auto;
+  display: flex;
+  text-align: center;
+  height: 50vh;
+  margin-top: 3rem;
+  background-image: url(images/video-bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  align-items: center;
+  justify-content: center;
+
+  @include responsive(tablet1100) {
+    height: 40vh;
+  }
+
+
+  article {
+    width: 35%;
+
+    @include responsive(tablet1100) {
+      width: 75%;
+    }
+
+
+    @include responsive(mobilni768) {
+      width: 80%;
+    }
+
+    h2 {
+      font-family: bungee;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+
+      @include responsive(tablet1100) {
+        font-size: 2.1;
+      }
+
+      @include responsive(mobilni768) {
+        font-size: 2.3rem;
+      }
+
+      @include responsive(mobilni450) {
+        font-size: 1.8rem;
+      }
+
+
+    }
+
+    p {
+      font-size: 0.7rem;
+      margin-bottom: 2.6rem;
+
+      @include responsive(tablet1100) {
+        font-size: 1.2rem;
+        width: 100%;
+      }
+
+
+      @include responsive(mobilni768) {
+        font-size: 1rem;
+        width: 100%;
+      }
+
+
+    }
+
+    a {
+      background-color: #f3c242;
+      padding: 1.4rem 1.6rem;
+      border-radius: 50%;
+      color: black;
+
+      @include responsive(tablet1100) {
+        padding: 1.6rem 1.8rem;
+      }
+
+
+
+    }
+  }
+}
+
+// follow us on instagram
+
+.follow {
+  article {
+    display: flex;
+
+    @include responsive(mobilni768) {
+      flex-direction: column;
+
+    }
+
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 1.4rem;
+    align-items: center;
+
+    h2 {
+      font-family: bungee, display;
+
+      @include responsive(mobilni768) {
+        font-size: 2.4rem;
+      }
+    }
+
+
+    .fab {
+      margin-right: 0.8rem;
+
+      @include responsive(mobilni768) {
+        transform: translateX(-220px);
+      }
+    }
+
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
+      padding: 0.7rem 1.6rem;
+
+      @include responsive(mobilni768) {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.6rem;
+      }
+
+      background-color: #f3c242;
+      font-family: bungee;
+      font-size: 0.7rem;
+
+      @include responsive(tablet1300) {
+        font-size: 1rem;
+      }
+
+      @include responsive(mobilni768) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .slike {
+    display: flex;
+    gap: 0.5rem;
+
+
+    img {
+      flex: 0 0 19%;
+      width: 19.4%;
+
+      @include responsive(mobilni768) {
+        width: 17%;
+      }
+    }
+
+  }
+}
+
+// footer
+
+footer {
+  margin-top: 5rem;
+  display: flex;
+  height: 50vh;
+  max-width: auto;
+
+  @include responsive(tablet1300) {
+    height: 30vh;
+  }
+
+  @include responsive(mobilni768) {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  @include responsive(mobilni450) {
+    height: 50vh;
+  }
+
+
+  .left {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.669), rgba(0, 0, 0, 0.68)), url(images/beer-party.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+
+    @include responsive(mobilni768) {
+      max-width: 100%;
+    }
+
+    @include responsive(mobilni640) {
+      // width: auto;
+    }
+
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+    .hosting {
+
+      flex-direction: column;
+      color: white;
+      text-align: center;
+
+      h2 {
+        font-family: bungee;
+        font-size: 3.6rem;
+        margin: 0 10rem 2rem;
+
+        @include responsive(tablet1300) {
+          font-size: 2.1rem;
+          margin: 0 5rem 2rem;
+        }
+
+
+        @include responsive(tablet1200) {
+          font-size: 2.1rem;
+        }
+
+        @include responsive(mobilni768) {
+          margin: 0 5rem;
+          font-size: 1.6rem;
+          margin-bottom: 1.4rem;
+        }
+
+        @include responsive(mobilni640) {
+          width: auto;
+        }
+
+        @include responsive(mobilni450) {
+          font-size: 1.4rem;
+        }
+
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0 10rem 2rem;
+
+        @include responsive(tablet1300) {
+          font-size: 1.2rem;
+          margin: 0 5rem 2rem;
+        }
+
+
+        @include responsive(mobilni768) {
+          margin: 0 3rem;
+          margin-bottom: 2rem;
+          font-size: 1rem;
+          width: 500px;
+        }
+
+        @include responsive(mobilni640) {
+          width: auto;
+        }
+
+        @include responsive(mobilni450) {
+          font-size: 0.9rem;
+        }
+      }
+
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        padding: 0.3rem 2.2rem;
+        background-color: #f3c242;
+        font-family: bungee;
+        font-size: 0.8rem;
+
+        @include responsive(mobilni768) {
+          font-size: 1rem;
+          padding: 0.2rem 0.7rem
+        }
+
+        @include responsive(mobilni450) {
+<<<<<<< HEAD
+          padding: 1rem 1.4rem;
+=======
+            padding: 1rem 1.4rem;
+>>>>>>> 6b8ba3008b245afc033e05bc38c66e7bce41201f
+        }
+      }
+    }
+  }
+
+  .right {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.854), rgba(0, 0, 0, 0.35)), url(images/bar-restock.jpg);
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+
+    @include responsive(mobilni768) {
+      max-width: 100%;
+    }
+
+    @include responsive(mobilni640) {
+      // width: auto;
+    }
+
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
+
+    .contact {
+      flex-direction: column;
+      color: white;
+      text-align: center;
+
+      h2 {
+        font-family: bungee;
+        font-size: 3.6rem;
+        margin: 0 10rem 2rem;
+
+        @include responsive(tablet1300) {
+          font-size: 2.1rem;
+          margin: 0 5rem 2rem;
+        }
+
+
+
+        @include responsive(mobilni768) {
+          margin: 0 5rem;
+          font-size: 1.6rem;
+          margin-bottom: 1.4rem;
+        }
+
+        @include responsive(mobilni640) {
+          width: auto;
+        }
+
+        @include responsive(mobilni450) {
+          font-size: 1.4rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0 10rem 2rem;
+
+        @include responsive(tablet1300) {
+          font-size: 1.2rem;
+          margin: 0 5rem 2rem;
+        }
+
+
+        @include responsive(mobilni768) {
+          margin: 0 3rem;
+          margin-bottom: 2rem;
+          font-size: 1rem;
+          width: 500px;
+        }
+
+        @include responsive(mobilni640) {
+          width: auto;
+        }
+
+        @include responsive(mobilni450) {
+          font-size: 0.9rem;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        padding: 0.3rem 2.2rem;
+        background-color: #f3c242;
+        font-family: bungee;
+        font-size: 0.8rem;
+
+
+        @include responsive(mobilni768) {
+          font-size: 1rem;
+          padding: 0.2rem 0.7rem
+        }
+
+        @include responsive(mobilni450) {
+<<<<<<< HEAD
+          padding: 1rem 1.4rem;
+=======
+              padding: 1rem 1.4rem;
+>>>>>>> 6b8ba3008b245afc033e05bc38c66e7bce41201f
+        }
+      }
+    }
+  }
+}
